@@ -4,8 +4,9 @@ gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
+group :development do 
+  gem 'sqlite3'
+end
 
 
 # Gems used only for assets and not required
@@ -27,7 +28,7 @@ gem 'koala', '1.6.0'
 gem 'friendly_id', '4.0.9'
 
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'pg'
 end
 
 # To use ActiveModel has_secure_password
