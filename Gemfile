@@ -26,6 +26,10 @@ gem 'omniauth-facebook'
 gem 'koala', '1.6.0'
 gem 'friendly_id', '4.0.9'
 
+group :production do
+  gem 'pg', '0.12.2'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
