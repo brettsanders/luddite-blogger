@@ -1,0 +1,32 @@
+<div id="home">
+  <h1>Luddite Blogger</h1>
+  <h3 style="font-style:italic">No images. No links. Just old-fashioned text.</h3>
+
+  <% if current_user && !current_user.blog_title? %>
+   <p>To get started choose a name for your blog.</p>
+   <p>(Note: You won't be able to change the title, so choose carefully...)</p>
+   <%= render 'users/form' %>
+
+   
+
+  <% end %>
+
+  <% if current_user && current_user.blog_title? %>
+    <h2>
+      <%= link_to "+ Add New Post +", new_post_path %>
+    </h2>
+  <% end %>
+
+
+  <h2>~ Recent Posts ~</h2>
+  <% @posts.each do |post| %>
+    <h2><%= link_to post.title, user_post_path(post.user, post) %></h2>
+    <!-- <p> -->
+      <% time_ago_in_words post.created_at %> 
+    <!-- </p> -->
+    <!-- <p> -->
+      <% truncate post.text %>
+    <!-- </p> -->
+  <% end %>
+</div>
+

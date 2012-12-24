@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+ @font-face {
+    font-family: '/assets/essays1774/essays1743bold';
+    src: url('/assets/essays1774/essays1743-bold-webfont.eot');
+    src: url('/assets/essays1774/essays1743-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/essays1774/essays1743-bold-webfont.woff') format('woff'),
+         url('/assets/essays1774/essays1743-bold-webfont.ttf') format('truetype'),
+         url('/assets/essays1774/essays1743-bold-webfont.svg#/assets/essays1774/essays1743bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: '/assets/essays1774/essays1743italic';
+    src: url('/assets/essays1774/essays1743-italic-webfont.eot');
+    src: url('/assets/essays1774/essays1743-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/essays1774/essays1743-italic-webfont.woff') format('woff'),
+         url('/assets/essays1774/essays1743-italic-webfont.ttf') format('truetype'),
+         url('/assets/essays1774/essays1743-italic-webfont.svg#/assets/essays1774/essays1743italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: '/assets/essays1774/essays1743medium';
+    src: url('/assets/essays1774/essays1743-webfont.eot');
+    src: url('/assets/essays1774/essays1743-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/essays1774/essays1743-webfont.woff') format('woff'),
+         url('/assets/essays1774/essays1743-webfont.ttf') format('truetype'),
+         url('/assets/essays1774/essays1743-webfont.svg#/assets/essays1774/essays1743medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: '/assets/essays1774/essays1743bolditalic';
+    src: url('/assets/essays1774/essays1743-bolditalic-webfont.eot');
+    src: url('/assets/essays1774/essays1743-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/essays1774/essays1743-bolditalic-webfont.woff') format('woff'),
+         url('/assets/essays1774/essays1743-bolditalic-webfont.ttf') format('truetype'),
+         url('/assets/essays1774/essays1743-bolditalic-webfont.svg#/assets/essays1774/essays1743bolditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  font-family: '/assets/essays1774/essays1743medium' ;
+  font-size: 30px;
+  text-align: justify;
+  margin-left: 250px;
+  margin-right: 250px;
+  line-height: 2.5em;
+  background-color: rgb(251,251,251);
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+div#home {
+    text-align: center;
+}
+
+p#links {
+    text-align: center;
+}
+
+input#post_title {
+    width: 700px;
+    height: 50px;
+    font-family: '/assets/essays1774/essays1743medium';
+    font-size: 30px;
+    outline: none;
+    border: none;
+    background-color: rgb(251,251,251);
+}
+
+textarea#post_text {
+    width: 700px;
+    height: 580px;
+    font-family: '/assets/essays1774/essays1743medium';
+    font-size: 30px;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    resize: none;
+    background-color: rgb(251,251,251);
+}
+
+
+
+
+
+
+
+
+
+
