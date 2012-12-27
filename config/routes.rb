@@ -9,7 +9,7 @@ Blog::Application.routes.draw do
 
   get "comments/destroy"
 
-  resources :posts, only: [:create, :edit, :new]
+  resources :posts, only: [:create, :edit, :new, :destroy]
 
   get "/:id", to: "users#show", as: "user_slug"
   get "/:user_id/:post_id", to: "posts#show", as: "user_post"
