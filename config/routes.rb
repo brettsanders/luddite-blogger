@@ -5,14 +5,20 @@ Blog::Application.routes.draw do
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
-  get "comments/create"
-
-  get "comments/destroy"
-
-  resources :posts, only: [:create, :edit, :new, :destroy]
-
   get "/:id", to: "users#show", as: "user_slug"
+  
+  get "/:user_id/new", to: "posts#new", as: "user_new_post"
+  get "/:user_id/:post_id/edit", to: "posts#edit", as: "user_edit_post" 
   get "/:user_id/:post_id", to: "posts#show", as: "user_post"
+  # put "/posts/:id", to: "posts#update"
+  # post "/posts", to: "posts#create"
+  put "/:user_id/:post_id", to: "posts#update"
+  delete "/:user_id/:post_id", to: "posts#destroy"
+  
+  resources :user do
+    resources :posts
+  end
+
 
   root :to => 'posts#index'
 

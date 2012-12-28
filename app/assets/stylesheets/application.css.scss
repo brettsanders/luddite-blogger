@@ -74,6 +74,7 @@ body {
 
 h1 {
     text-align: center;
+    
 }
 
 a {
@@ -111,6 +112,12 @@ textarea#post_text {
     background-color: rgb(251,251,251);
 }
 
+div#user_nav {
+  text-align: center;
+  float: right;
+  margin-right: -200px;
+  margin-top: -50px;
+}
 
 
 

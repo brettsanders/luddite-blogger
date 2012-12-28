@@ -1,5 +1,5 @@
 <div id="home">
-  <h1>Luddite Blogger</h1>
+  <h1><%= User.find(params[:id]).blog_title %></h1>
   
 
   <% if current_user && !current_user.blog_title? %>
@@ -9,15 +9,16 @@
 
   <% end %>
 
-  <% if current_user && current_user.blog_title? %>
+  <% if current_user && current_user.blog_title? && (current_user == @user) %>
     <h2>
-      <%= link_to "+ Add New Post +", new_post_path %>
+      <%= link_to "+ Add New Post +", user_new_post_path(current_user) %>
     </h2>
   <% end %>
 
   <% unless @posts.blank? %>
     <% @posts.each do |post| %>
-      <h2><%= link_to post.title, post %></h2>
+
+      <h2><%= link_to post.title, user_post_path(post.user, post) %></h2>
       <!-- <p> -->
         <% time_ago_in_words post.created_at %> 
       <!-- </p> -->

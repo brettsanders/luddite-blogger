@@ -9,6 +9,10 @@
 </head>
 <body>
   <div id="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    <% end %>
+
     <div id="user_nav">
       <% if current_user %>
         Signed in as <%= current_user.name %>
@@ -18,9 +22,6 @@
       <% end %>
     </div>
 
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, id: "flash_#{name}" %>
-    <% end %>
     <%= yield %>
   </div>
 </body>

@@ -10,23 +10,5 @@
    
 
   <% end %>
-
-  <% if current_user && current_user.blog_title? %>
-    <h2>
-      <%= link_to "+ Add New Post +", new_post_path %>
-    </h2>
-  <% end %>
-
-
-  <h2>~ Recent Posts ~</h2>
-  <% @posts.each do |post| %>
-    <h2><%= link_to post.title, user_post_path(post.user, post) %></h2>
-    <!-- <p> -->
-      <% time_ago_in_words post.created_at %> 
-    <!-- </p> -->
-    <!-- <p> -->
-      <% truncate post.text %>
-    <!-- </p> -->
-  <% end %>
 </div>
 
