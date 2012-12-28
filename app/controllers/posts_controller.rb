@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
 
-    unless current_user == @post.user
+    unless current_user.slug == params[:user_id]
       return redirect_to user_slug_path(current_user), notice: "I don't think so"
     end
 
@@ -96,7 +96,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:post_id], :conditions => { :user_id => user })
 
     unless current_user == @post.user
-      return redirect_to user_slug_path(current_user), notice: "I don't think so"
+      return redirect_to user_slug_path(current_user) , notice: "I don't think so"
     end
 
     @post.destroy
