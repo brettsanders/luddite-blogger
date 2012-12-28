@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'omniauth-facebook'
 gem 'koala', '1.6.0'
 gem 'friendly_id', '4.0.9'
+gem 'facebook_share', '0.0.6'
 
 group :production do
   gem 'pg'
