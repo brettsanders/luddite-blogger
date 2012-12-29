@@ -8,21 +8,29 @@
   <%= auto_discovery_link_tag :atom, "/posts.atom" %>
 </head>
 <body>
+<div id="navigation">
+  <div style="float:left;">
+  <% if current_user %>
+    <%= link_to 'Luddite Blogger', user_slug_path(current_user)  %>
+  <% else %>
+    <%= link_to 'Luddite Blogger' %>
+  <% end %>
+  </div>
+  <div style="float:right;">
+    <%= link_to 'Share on Facebook', '#', :class => "fb_share"  %>
+    <%= facebook_share_once %>
+    <% if current_user %>
+        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+      <% else %>
+        <%= link_to "Sign in", "/auth/facebook", id: "sign_in" %>
+      <% end %>
+  </div>
+
+</div>
   <div id="container">
-    
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, id: "flash_#{name}" %>
     <% end %>
-
-    <div id="user_nav">
-      <% if current_user %>
-        Signed in as <%= current_user.name %>
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
-      <% else %>
-        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-      <% end %>
-    </div>
-
   
     <%= yield %>
 

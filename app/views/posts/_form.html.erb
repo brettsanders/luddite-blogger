@@ -14,14 +14,12 @@
   <%# f.hidden_field :user_id, current_user %>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: "<Title>" %>
   </div>
   <div class="field">
-    <%= f.label :text %><br />
-    <%= f.text_area :text %>
+    <%= f.text_area :text, placeholder: "<Text>" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit Post", :class => "submit" %>
   </div>
 <% end %>

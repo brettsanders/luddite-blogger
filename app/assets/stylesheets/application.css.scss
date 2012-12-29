@@ -74,13 +74,19 @@ body {
 
 h1 {
     text-align: center;
-    padding-top: 45px;
-    
+}
+
+h3 {
+  margin-top: 0px;
 }
 
 a {
     color: black;
     text-decoration: none;
+}
+
+div#container {
+  margin-top: 100px;
 }
 
 div#home {
@@ -103,7 +109,7 @@ input#post_title {
 
 textarea#post_text {
     width: 700px;
-    height: 580px;
+    height: 250px;
     font-family: '/assets/essays1774/essays1743medium';
     font-size: 30px;
     outline: none;
@@ -120,7 +126,45 @@ div#user_nav {
   /*margin-top: -50px;*/
 }
 
+#navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #ffffff;
+  height: 75px;
+  text-align: center;
+  /*padding-top: 15px;*/
+  /* Adds shadow to the bottom of the bar */
+  -webkit-box-shadow: 0px 0px 8px 0px #000000;
+  -moz-box-shadow: 0px 0px 8px 0px #000000;
+  box-shadow: 0px 0px 8px 0px #000000;
+  /* Adds the transparent background */
+  background-color: rgba(1, 1, 1, 0.8);
+  color: rgba(1, 1, 1, 0.8);
+  left: 0px;
+}
+#navigation a {
 
+  font-size: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+#navigation a:hover {
+  color: grey;
+} 
+
+.submit {
+  font-size: 60px;
+  border: none;
+  background-color: rgb(251,251,251);
+  font-family: '/assets/essays1774/essays1743medium';
+  margin-left: 205px;
+  font-weight: bold;
+
+}
 
 
 
