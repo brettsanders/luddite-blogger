@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :ensure_user_is_logged_in, except: [:show, :index]
+  before_filter :no_root_path_logged_in, only: [:index]
 
   # GET /posts
   # GET /posts.json
@@ -111,5 +112,11 @@ class PostsController < ApplicationController
 
   def ensure_user_is_logged_in
     redirect_to root_path, :notice => "You must be logged in" unless current_user
+  end
+
+  def no_root_path_logged_in
+    if current_user
+      redirect_to user_slug_path(current_user)
+    end
   end
 end

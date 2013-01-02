@@ -21,7 +21,7 @@
     <%= facebook_share_once(
           :name => "Luddite Blogger", 
           :picture => "http://etc.usf.edu/clipart/62800/62839/62839_typewriter_lg.gif",
-          :description => truncate(facebook_share_description_text, :length => 320) ) %>
+          :description => escape_javascript(facebook_share_description_text) ) %>
     <% if current_user %>
         <%= link_to "Sign out", signout_path, id: "sign_out" %>
       <% else %>
