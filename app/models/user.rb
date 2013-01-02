@@ -5,10 +5,12 @@ class User < ActiveRecord::Base
 
   extend FriendlyId
   friendly_id :blog_title, use: :slugged
+
   has_many :user_blogs
   has_many :posts
   
   validates :blog_title, :uniqueness => true
+  # validates_format_of :login, :with => /\A[a-z0-9]+\z/i
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|

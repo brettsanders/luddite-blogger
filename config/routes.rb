@@ -6,6 +6,7 @@ Blog::Application.routes.draw do
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
   get "/:id", to: "users#show", as: "user_slug"
+  get "/:id/edit", to: "users#edit", as: "user_edit"
   
   get "/:user_id/new", to: "posts#new", as: "user_new_post"
   get "/:user_id/:post_id/edit", to: "posts#edit", as: "user_edit_post" 
