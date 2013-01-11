@@ -2,6 +2,8 @@
 
   <%= if current_user && (current_user = @user) %>
     <h1><%= link_to(@user.blog_title, user_edit_path) %></h1>
+  <% else %>
+    <h1><%= @user.blog_title %></h1>
   <% end %>
   
 
