@@ -1,5 +1,8 @@
 <div id="home">
-  <h1><%= link_to(@user.blog_title, user_edit_path) %></h1>
+
+  <%= if current_user && (current_user = @user) %>
+    <h1><%= link_to(@user.blog_title, user_edit_path) %></h1>
+  <% end %>
   
 
   <% if current_user && !current_user.blog_title? %>
